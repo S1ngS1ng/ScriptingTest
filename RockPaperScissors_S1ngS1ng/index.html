@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+<head>
+    <meta charset="UTF-8">
+    <title>石头剪子布</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="scripts/scripts.js"></script>
+</head>
+<body ng-controller="mainCtrl">
+<h1 class="text-center">Welcome <small>v 1.0.0</small></h1>
+<div class="container">
+    <div class="row">
+        <!--Button Group-->
+        <div class="span4" ng-repeat="(key, value) in buttonsValue">
+            <input type="button" class="user-choice btn btn-primary btn-lg" ng-value="value" ng-click="showResult(key)" />
+        </div>
+        <!--Result-->
+        <div class="span4">
+            <div class="panel">
+                <div class="panel-body">{{result}}</div>
+            </div>
+        </div>
+        <!--Computer Choice-->
+        <div class="span4">
+            <div class="panel panel-info computer-choice">
+                <div class="panel-body">{{computerChoice}}</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Statistics-->
+<div class="container-fluid statistics">
+    <span class="panel panel-info">胜利次数: {{correctCounter}}</span>
+    <span class="panel panel-info">游戏总数: {{tryCounter}}</span>
+    <span class="panel panel-info">胜率: {{winRate}}</span>
+</div>
+</body>
+</html>

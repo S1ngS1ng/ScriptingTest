@@ -1,0 +1,24 @@
+{
+  "name": "RockPaperScissors",
+  "homepage": "https://github.com/S1ngS1ng/ScriptingTest",
+  "authors": [
+    "S1ngS1ng"
+  ],
+  "description": "",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.1",
+    "angular": "1.5.0"
+  }
+}

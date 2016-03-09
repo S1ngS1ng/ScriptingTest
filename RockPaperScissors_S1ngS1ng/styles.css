@@ -1,0 +1,28 @@
+.user-choice {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px !important;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.panel {
+    width: 200px;
+    text-align: center;
+}
+
+.row > div {
+    float: left;
+}
+
+.statistics {
+    position: relative;
+    left: 40%;
+}
+
+.statistics > span {
+    font-size: 130%;
+    font-weight: bold;
+}
