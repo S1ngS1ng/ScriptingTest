@@ -3,7 +3,7 @@
 -----
 
 ### 写在最前
-* 下文所有的[], 除了- [ ], 其他的均代表变量, 根据实际情况自行填充. 输入的时候不需要把中括号输进去
+* 下文所有的[ ], 除了- [ ], 其他的均代表变量, 根据实际情况自行填充. 输入的时候不需要把中括号输进去
 * 如果有小括号和引号, 请输入进去
 * 下文提到了HEAD. 这是github里面的一个指针, 指向当前的版本所处的位置. 当然, 这个指针可以更改. 而且对于不同的repo, 指针也可能不同. 对于同一个repo, 本地的HEAD与远程的HEAD也可能不同
     * 举个例子, `git clone`下来了代码, 然后加入了一段话. commit之后, 就表示本地的HEAD指针与远程的HEAD指针不同了. 因此才会允许push.
@@ -11,7 +11,7 @@
     * 遇到出现问题的情况, 可以试着用这个思路想想解决办法
 
 ### GIT fork 后?
-1. 从 url: https://github.com/S1ngS1ng/ScriptingTest.git (柳星)那里fork项目之后, 得到url: https://github.com/yuhjun/ScriptingTest.git (余虹君)   
+1. 从 url: https://github.com/S1ngS1ng/ScriptingTest.git (柳星)那里fork项目之后, 以余虹君为例, 得到带有github ID的url: https://github.com/yuhjun/ScriptingTest.git (余虹君)   
     * 参考 http://www.tuicool.com/articles/6vayqen
 2. git clone 余虹君 -> 把远程repo复制到本地电脑
 3. 针对`RockPaperScissors_S1ngS1ng`, 因为有依赖包(AngularJS, Bootstrap和jQuery), 因此需要首先cd到`bower.json`所在的文件夹, 打开git bash, 然后使用bower install 安装包文件
