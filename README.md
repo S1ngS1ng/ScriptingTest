@@ -120,3 +120,13 @@ upstream: https://github.com/S1ngS1ng/ScriptingTest.git (push)
 * `git log`用来查询repo的版本变动情况. 如果有需要的话, 可以通过commit ref来恢复
 * 建议使用`git log --oneline --decorate --graph`作为查询命令
 * `git reflog`用来查询本地的操作历史. 确切一点说, 是查询HEAD的变化情况. 每一次HEAD变动, 都会记录在reflog里
+
+### 版本控制
+* 撤销文件修改
+    * 如果没有add, 则`git checkout -- [fileName]` (注意checkout之后的两个横线--)
+    * 如果文件已经add, 则`git reset [fileName]`
+    * 如果文件已经commit, 则`git reset --hard HEAD^`或`git reset --mixed HEAD^`或`git reset --soft HEAD^`
+        * `--hard`表示**完全**回退到上一个版本, 回退的区域包括Working Directory, Stage Area, Commit History. (这时`git status`会显示**没有更改**)
+        * `--mixed`表示**部分**回退到上一个版本, 回退的区域包括Stage Area和Commit History. (即回退到`git add`执行之前, 这时`git status`会显示文件**有更改**)
+        * `--soft`表示**部分**回退到上一个版本, 回退的区域仅为Commit History. (即回退到`git add`执行之后, 即`git commit`执行之前, 这时`git status`会显示**没有更改**, 但由于存在`uncommitted changes`, 因此不能执行切换branch之类的操作)
+        
