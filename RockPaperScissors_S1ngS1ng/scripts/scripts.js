@@ -42,7 +42,7 @@ angular.module('mainApp', [])
 
             if (usr === comp) $scope.result = '平手';
             else $scope.result = resultPattern[usr][comp] ? '胜利' : '失败';
-            return $scope.result
+            return $scope.result;
         };
 
         // Invoked when clicking option buttons
