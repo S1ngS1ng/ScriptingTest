@@ -70,6 +70,8 @@ upstream: https://github.com/S1ngS1ng/ScriptingTest.git (push)
 ### 关于branch
 * 本地删除branch是`git branch -d xxx`.
     * 如果有未提交的内容, 想强行删除branch, 就是`git branch -D xxx`. 谨慎使用, 这样会让你的未提交内容丢失
+* 本地创建新branch的命令是`git checkout -b xxx`或`git branch xxx`
+    * `git checkout -b dev` = `git branch dev` + `git checkout dev`
 * 如果想在Github里删除名为dev的branch, 命令是`git push origin :dev`
 
 ### Commit
